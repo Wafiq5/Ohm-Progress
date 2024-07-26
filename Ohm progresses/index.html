@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Ohm</title>
+    <link rel="icon" type="image/x-icon" href="/pictures/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="pictures\Logo.svg" class="logo-img" onclick="window.location.href ='index.html'">
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <nav class="navbar">
+            <div class="nav-links">
+                <ul class="nav-ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="subscriptions.html">Subscriptions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signup-form.html"><span class="text-gradient" id="accountName">Sign up</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--! Welcome Section -->
+    <div class="section section-odd section-welcome-container">
+        <section class="section-welcome">
+            <div class="section-welcome-text-container">
+                <h2 class="head-text welcome-head-text">Welcome to <span class="text-gradient">Ohm</span></h2>
+                <div class="paragraph welcome-paragraph">
+                    Discover the best in energy solutions with Ohm. We provide sustainable and efficient mechanical and
+                    computer services tailored to your needs.
+                </div>
+                <div class="explore-button-container">
+                    <a href="#section-works"><button class="gradient-button explore-button">Explore more</button></a>
+                </div>
+            </div>
+            <div class="section-welcome-picture-container">
+                <img src="pictures/Pic-1.jpg" class="welcome-picture pic-1">
+            </div>
+        </section>
+    </div>
+    <div class="section-spacing"></div>
+    <!--! Ohm Works Section -->
+    <div class="section section-even section-works-container">
+        <section class="section-works" id="section-works">
+            <div class="section-title">
+                <h2 class="head-text works-head-text"><span class="text-gradient">Ohm's </span>Work</h2>
+                <span>Discover the breadth and depth of Ohm's capabilities through our diverse portfolio of services.
+                    From mechanical engineering to cutting-edge computer solutions, we're committed to delivering
+                    excellence in every project.</span>
+            </div>
+            <div class="works-container">
+                <div class="work-card">
+                    <div class="work-card-contents">
+                        <div class="paragraph details-paragraph">
+                            <h2 class="head-text text-gradient">Mechanical</h2>
+                            Dive into the world of precision with Ohm's mechanical services. Our expert team specializes
+                            in optimizing industrial processes, ensuring efficiency and reliability at every turn. From
+                            conceptualization to implementation, we're your trusted partner in achieving operational
+                            excellence.
+                        </div>
+                        <img src="pictures/Pic-2.jpg" class="work-picture pic-2">
+                    </div>
+                </div>
+                <div class="gradient-line"></div>
+                <div class="work-card">
+                    <div class="paragraph details-paragraph">
+                        <div class="work-card-contents">
+                            <img src="pictures/Pic-3.jpg" class="work-picture pic-3">
+                            <div class="paragraph details-paragraph">
+                                <h2 class="head-text text-gradient">Computer</h2>
+                                Unleash the potential of technology with Ohm's computer solutions. Our innovative
+                                approach to software development and network optimization ensures seamless integration
+                                and maximum performance. Whether it's enhancing user experience or streamlining business
+                                operations, we're dedicated to driving your success in the digital age.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="learn-button-container">
+                <span class="learn-paragraph">Dive deeper into how <span class="text-gradient">Ohm</span> maximizes energy efficiency</span>
+                <a href="about.html"><button class="gradient-button-1">Explore more</button></a>
+            </div>
+        </section>
+    </div>
+
+    <div class="section-spacing"></div>
+    <!--! Subscriptions Section -->
+    <div class="section section-odd section-subscription-container">
+        <section class="section-subscription" id="section-subscription">
+            <div class="section-title">
+                <h2 class="head-text subscription-head-text"><span class="text-gradient">Ohm's</span> Subscriptions</h2>
+            </div>
+            <div class="section-title">
+                <span>Choose the subscription plan that best fits your needs and start enjoying the benefits
+                    today!</span>
+            </div>
+            <div class="subscriptions-container">
+                <div class="subscriptions subscription-1">
+                    <div class="subscription-feature-content">
+                        <div class="subscription-title">Basic</div>
+                        <div class="subscription-value">$69.99</div>
+                        <div class="subscription-features-list">
+                            <ul>
+                                <li>Access to essential features</li>
+                                <li>Basic support</li>
+                                <li>Limited customization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="gradient-button subscription-get-button"
+                        onclick="window.location.href ='subscription-basic.html'">Get</button>
+                </div>
+                <div class="subscriptions subscription-2">
+                    <div class="subscription-feature-content">
+                        <div class="subscription-title"><span class="text-gradient">Pro</span><span
+                                class="recommended-subscription">(Recommended)</span></div>
+                        <span></span>
+                        <div class="subscription-value">$169.99</div>
+                        <div class="subscription-features-list">
+                            <ul>
+                                <li>Advanced features and support</li>
+                                <li>Customization options</li>
+                                <li>Premium benefits</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="gradient-button-1 subscription-get-button"
+                        onclick="window.location.href ='subscription-pro.html'">Get</button>
+                </div>
+                <div class="subscriptions subscription-3">
+                    <div class="subscription-feature-content">
+                        <div class="subscription-title"><span class="text-gradient background-gradient">Business</span>
+                        </div>
+                        <div class="subscription-value">$420.69</div>
+                        <div class="subscription-features-list">
+                            <ul>
+                                <li>Full suite of services</li>
+                                <li>Prioritized support</li>
+                                <li>Custom solutions</li>
+                                <li>Scalable options</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="gradient-button subscription-get-button"
+                        onclick="window.location.href ='subscription-business.html'">Get</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="section-spacing"></div>
+    <!--! Contact Section -->
+    <div class="section section-even section-contact-container">
+        <section class="section-contact" id="section-contact">
+            <h2 class="head-text contact-head-text">Contact <span class="text-gradient">Ohm</span></h2>
+            <div class="section-contact-contents">
+                <!--; Reservation -->
+                <div class="reservation-form-container">
+                    <h2 class="reservation-form-head-text">Make a reservation</h2>
+                    <div class="reservation-form">
+                        <div class="reservation-form-input-container">
+                            <input type="text" class="gradient-input reservation-form-input" placeholder="Name"
+                                id="reservation-name">
+                        </div>
+                        <div class="reservation-form-input-container">
+                            <input type="text" class="gradient-input reservation-form-input" placeholder="Email"
+                                id="reservation-email">
+                        </div>
+                        <div class="reservation-form-input-container">
+                            <input type="text" class="gradient-input reservation-form-input" placeholder="Phone"
+                                id="reservation-phone">
+                        </div>
+                        <div class="reservation-form-input-container">
+                            <input type="date" class="gradient-input reservation-form-input" placeholder="Date"
+                                id="reservation-date">
+                        </div>
+                        <div class="reservation-form-input-container">
+                            <input type="time" class="gradient-input reservation-form-input" placeholder="Time"
+                                id="reservation-time">
+                        </div>
+                        <div class="reservation-form-input-container">
+                            <input type="text" class="gradient-input reservation-form-input "
+                                placeholder="Subject/Requests" id="reservation-subject-requests">
+                        </div>
+                        <button class="gradient-button reservation-submit-button"
+                            onclick="sendReservationInfo()">Confirm</button>
+                    </div>
+                    <div class="reservation-confirmation">
+                        <img src="/pictures/Thankyou-iconV2.png" class="reservation-confirmation-picture">
+                        <h2 class="reservation-confirmation-title">Thank you!
+                            <h2 class="reservation-confirmation-text">Your reservation has been received.</h2>
+                        </h2>
+                    </div>
+                    <div class="contact-container">
+                        <h2 class="contact-head-text">Or call...</h2>
+                        <div class="contact-info">
+                            <div class="contact-info-container">
+                                <div class="contact-number"><i class="fa fa-phone" style="font-size: 30px"></i>
+                                    (248)762-0356</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer">
+                <div class="row-container row-1-container">
+                    <ul class="row">
+                        <li class="row_head">Explore</li>
+                        <li onclick="window.location.href ='index.html'">Home</li>
+                        <li onclick="window.location.href ='about.html'">About Us</li>
+                        <li onclick="window.location.href ='subscriptions.html'">Subscriptions</li>
+
+                    </ul>
+                </div>
+                <div class="row-container row-2-container">
+                    <ul class="row">
+                        <li class="row_head">Blog</li>
+                        <li>Latest Posts</li>
+                        <li>News</li>
+                        <li>Insights</li>
+                    </ul>
+                </div>
+                <div class="row-container row-3-container">
+                    <ul class="row">
+                        <li class="row_head">Help & FAQ</li>
+                        <li onclick="window.location.href ='contact.html'">Support</li>
+                        <li onclick="window.location.href ='terms-services.html'">Terms of Service</li>
+                        <li onclick="window.location.href ='privacy-policy.html'">Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="row-container row-4-container">
+                    <p class="row_head">Newsletter</p>
+                    <div class="newsletter-text">Subscribe to get weekly energy saving and tech tips!</div>
+                    <div class="newsletter-container">
+                        <input type="text" class="gradient-input newsletter-input" placeholder="Enter your email">
+                        <button class="gradient-button-1 newsletter-button"
+                            onclick="sendNewsletterInfo()">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="botm">
+                <div class="botm-language"><i class="fa fa-globe" style="font-size: 20px" id="globe"></i> English
+                    (United States)</div>
+                <div onclick="window.location.href ='contact.html'">Contact ohm</div>
+                <div onclick="window.location.href ='privacy-policy.html'">Privacy & Cookies</div>
+                <div onclick="window.location.href ='terms-services.html'">Terms of use</div>
+                <div>© <span class="text-gradient">Ohm</span> 2023</div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
