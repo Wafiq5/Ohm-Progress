@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscriptions - Ohm</title>
+    <link rel="icon" type="image/x-icon" href="/pictures/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="pictures\Logo.svg" class="logo-img" onclick = "window.location.href ='index.html'">
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <nav class="navbar">
+            <div class="nav-links">
+                <ul class="nav-ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="subscriptions.html">Subscriptions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signup-form.html"><span class="text-gradient" id="accountName">Sign up</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="subscription-content-container">
+        <h2 class="head-text"><span class="text-gradient">Ohm's</span> Business plan<div class="subscription-value"
+                style="text-align: left !important;">$420.69/year</div>
+        </h2>
+
+        <div class="subscription-info">
+            <h2 class="subscription-info-head-text">Experience the full suite of energy solutions with Ohm's Business
+                plan:</h2> <br>
+            <p class="subscription-info-paragraph">Empower your business with Ohm's Business plan, the ultimate solution
+                for comprehensive energy management. For just $420.69 a year, access a full suite of services,
+                prioritized support, and scalable options to meet your evolving needs and drive your business forward.
+            </p><br>
+            <h2 class="subscription-info-head-text">With Ohm's Business plan, you'll benefit from:</h2> <br>
+            <ul class="subscription-info-features-ul">
+                <li>A full suite of services tailored to your business requirements</li>
+                <li>Prioritized support from our dedicated team of experts</li>
+                <li>Custom solutions and scalable options for maximum flexibility</li>
+                <li>Advanced analytics and reporting for informed decision-making</li>
+                <li>Integration with existing systems for seamless operations</li>
+                <li>Training and onboarding sessions for your team</li>
+            </ul>
+        </div>
+        <h2 class="subscription-info-head-text">Take your business to new heights with Ohm's Business plan:</h2>
+
+        <a href="subscription-checkout.html?plan=business"><button
+                class="gradient-button subscription-page-get-button">Get</button></a>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer">
+                <div class="row-container row-1-container">
+                    <ul class="row">
+                        <li class="row_head">Explore</li>
+                        <li onclick="window.location.href ='index.html'">Home</li>
+                        <li onclick="window.location.href ='about.html'">About Us</li>
+                        <li onclick="window.location.href ='subscriptions.html'">Subscriptions</li>
+
+                    </ul>
+                </div>
+                <div class="row-container row-2-container">
+                    <ul class="row">
+                        <li class="row_head">Blog</li>
+                        <li>Latest Posts</li>
+                        <li>News</li>
+                        <li>Insights</li>
+                    </ul>
+                </div>
+                <div class="row-container row-3-container">
+                    <ul class="row">
+                        <li class="row_head">Help & FAQ</li>
+                        <li onclick="window.location.href ='contact.html'">Support</li>
+                        <li onclick="window.location.href ='terms-services.html'">Terms of Service</li>
+                        <li onclick="window.location.href ='privacy-policy.html'">Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="row-container row-4-container">
+                    <p class="row_head">Newsletter</p>
+                    <div class="newsletter-text">Subscribe to get weekly energy saving and tech tips!</div>
+                    <div class="newsletter-container">
+                        <input type="text" class="gradient-input newsletter-input" placeholder="Enter your email">
+                        <button class="gradient-button-1 newsletter-button"
+                            onclick="sendNewsletterInfo()">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="botm">
+                <div class="botm-language"><i class="fa fa-globe" style="font-size: 20px" id="globe"></i> English
+                    (United States)</div>
+                <div onclick="window.location.href ='contact.html'">Contact ohm</div>
+                <div onclick="window.location.href ='privacy-policy.html'">Privacy & Cookies</div>
+                <div onclick="window.location.href ='terms-services.html'">Terms of use</div>
+                <div>© <span class="text-gradient">Ohm</span> 2023</div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
