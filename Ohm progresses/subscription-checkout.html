@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Ohm</title>
+    <link rel="icon" type="image/x-icon" href="/pictures/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="pictures\Logo.svg" class="logo-img" onclick = "window.location.href ='index.html'">
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <nav class="navbar">
+            <div class="nav-links">
+                <ul class="nav-ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="subscriptions.html">Subscriptions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signup-form.html"><span class="text-gradient" id="accountName">Sign up</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="chosen-subscription-container">
+        <div class="chosen-subscription"><span class="subscription-name" id="subscription-name"></span></div>
+        <div class="chosen-subscription-price-container">
+            <div class="subscription-price-container">Subscription price: <span class="subscription-price"></span></div>
+            <div class="total-tax-container">Estimated tax: <span class="total-tax"></span></div>
+            <div class="sum-line"></div>
+            <div class="total-price-container">Total price: <span class="total-price"></span></div>
+        </div>
+    </div>
+    <div class="checkout-form-container">
+        <div class="enter">
+            <span class="card-details-head-text" id="cardDetailsHeaderText">Card details</span>
+        </div>
+        <!--!Card input and validation form-->
+        <form action="/" class="main-form">
+            <div class="checkout-inputs-container">
+                <!--Name input (Card owner)-->
+                <div class="name-input-container">
+                    <div class="enter">
+                        <span class=" card-input-head-text" id="cardOwnerHeaderText">Card Owner</span>
+                    </div>
+                    <div class="name-div">
+                        <input type="text" class="gradient-input card-input name-input" id="cardOwnerName" />
+                    </div>
+                </div>
+                <!--Card Number-->
+                <div class="numb-input-container">
+                    <div class="enter">
+                        <span class="card-input-head-text" id="cardNumberHeaderText">Card Number</span>
+                    </div>
+                    <div class="number-div">
+                        <input type="text" class="gradient-input card-input numb-input" id="cardNumberPart1" maxlength="4"
+                            placeholder="XXXX" />
+                        <input type="text" class="gradient-input card-input numb-input" id="cardNumberPart2" maxlength="4"
+                            placeholder="XXXX" />
+                        <input type="text" class="gradient-input card-input numb-input" id="cardNumberPart3" maxlength="4"
+                            placeholder="XXXX" />
+                        <input type="text" class="gradient-input card-input numb-input" id="cardNumberPart4" maxlength="4"
+                            placeholder="XXXX" />
+                    </div>
+                </div>
+                <!-- CVV and date -->
+                <div class="cvv-date-container">
+                    <div class="cvv-div">
+                        <span class=" card-input-head-text cvv-head-text" id="cvvNumberHeaderText">CVV</span>
+                        <input type="text" class="gradient-input card-input cvv-input" id="cvvNumber" maxlength="3" placeholder="123" />
+                    </div>
+                    <div class="date-div">
+                        <div class="card-input-head-text date-head-text" id="expDateHeaderText">Expiration Date</div>
+                        <div class="date-inputs-container">
+                            <input type="text" class="gradient-input card-input date-input month" id="expMonth" maxlength="2"
+                                placeholder="ex. 12" />
+                            <input type="text" class="gradient-input card-input date-input year" id="expYear" maxlength="2"
+                                placeholder="ex. 28" />
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="gradient-button-1 card-info-submit-btn" onclick="sendCardInfo()" id="sendCardInfoBtn">
+                Submit
+                </button>
+            </div>
+            
+            <!--!Loading screen-->
+            <div class="loading-screen" style="display: none">
+                <div class="loader-container">
+                    <div class="enter">
+                        <span class="card-details-head-text" id="cardDetailsHeaderText">Card details</span>
+                    </div>
+                    <div class="loader"></div>
+                    <span class="loader-text">Validating Transaction</span>
+                </div>
+            </div>
+            <!--!Card confirmation form-->
+            <div class="confirmation-screen-container" style="display: none">
+                <div class="enter">
+                    <span class="confirmation-head-text">Card confirmation</span>
+                </div>
+                <p class="confirmation-paragraph">
+                    <span class="confirmation-Congratulations-sentence">
+                        <span class="confirmation-Congratulations-word">
+                            Congratulations!
+                        </span>
+                        Your payment transaction has been successfully validated.
+                    </span>
+                    <br /><br />
+                    <span class="confirmation-appreciate-sentence">
+                        Thank you for providing accurate payment information. You can
+                        proceed with confidence, knowing that your transaction has been
+                        processed securely and efficiently.
+                    </span>
+                </p>
+                <a href="subscription-thanks.html"><button type="button" class="gradient-button-1 valid-transaction-btn">Continue</button></a>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer">
+                <div class="row-container row-1-container">
+                    <ul class="row">
+                        <li class="row_head">Explore</li>                        
+                        <li onclick = "window.location.href ='index.html'">Home</li>
+                        <li onclick = "window.location.href ='about.html'">About Us</li>
+                        <li onclick = "window.location.href ='subscriptions.html'">Subscriptions</li>
+
+                    </ul>
+                </div>
+                <div class="row-container row-2-container">
+                    <ul class="row">
+                        <li class="row_head">Blog</li>
+                        <li>Latest Posts</li>
+                        <li>News</li>
+                        <li>Insights</li>
+                    </ul>
+                </div>
+                <div class="row-container row-3-container">
+                    <ul class="row">
+                        <li class="row_head">Help & FAQ</li>
+                        <li onclick = "window.location.href ='contact.html'">Support</li>
+                        <li onclick = "window.location.href ='terms-services.html'">Terms of Service</li>
+                        <li onclick = "window.location.href ='privacy-policy.html'">Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="row-container row-4-container">
+                    <p class="row_head">Newsletter</p>
+                    <div class="newsletter-text">Subscribe to get weekly energy saving and tech tips!</div>
+                    <div class="newsletter-container">
+                        <input type="text" class="gradient-input newsletter-input" placeholder="Enter your email">
+                        <button class="gradient-button-1 newsletter-button" onclick="sendNewsletterInfo()">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="botm">
+                <div class="botm-language"><i class="fa fa-globe" style="font-size: 20px" id="globe"></i> English (United States)</div>
+                <div onclick = "window.location.href ='contact.html'">Contact ohm</div>
+                <div onclick = "window.location.href ='privacy-policy.html'">Privacy & Cookies</div>
+                <div onclick = "window.location.href ='terms-services.html'">Terms of use</div>
+                <div>© <span class="text-gradient">Ohm</span> 2023</div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
