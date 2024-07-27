@@ -7,7 +7,7 @@ let expandMenu = () => {
 
 document.querySelector(".toggle-button").addEventListener("click", expandMenu);
 
-//! Reservation confirm
+//! Reservation confirm!
 let sendReservationInfo = () => {
     let reservationName = document.getElementById("reservation-name").value;
     let reservationEmail = document.getElementById("reservation-email").value;
@@ -38,7 +38,7 @@ let sendReservationInfo = () => {
         document.querySelector(".contact-container").style.display = "none";
     }
 };
-//! CHECKOUT VALIDATION
+//! CHECKOUT VALIDATION!
 
 let cardOwnerName,
     cardNumberPart1,
@@ -76,7 +76,7 @@ let sendCardInfo = () => {
         return regex.test(input);
     }
 
-    //! GENERAL TESTING!!
+    //! GENERAL TESTING!!!!
     if (
         !cardOwnerName ||
         !cardNumberPart1 ||
@@ -151,7 +151,7 @@ let sendCardInfo = () => {
     }
  //! ALL INDIVIDUAL TESTING BEGINS HERE!!!
 
-    //Counts how many valid inputs are there
+    //Counts how many valid inputs are there.
     let validInput_count = 0;
 
     //* Card owner name validation
@@ -231,6 +231,5 @@ let sendCardInfo = () => {
             }
             sum += digit;
         }
-
         return sum;
     }
