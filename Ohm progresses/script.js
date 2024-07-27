@@ -1,4 +1,4 @@
-//! Navbar
+    //! Navbar
 let navbarLinks = document.querySelector(".nav-links");
 
 let expandMenu = () => {
@@ -148,4 +148,89 @@ let sendCardInfo = () => {
         }
     } else {
         document.querySelector(".card-input").style.border = "4px solid #5cc74a";
+    }
+ //! ALL INDIVIDUAL TESTING BEGINS HERE!!!
+
+    //Counts how many valid inputs are there
+    let validInput_count = 0;
+
+    //* Card owner name validation
+    if (hasNumbers(cardOwnerName) || /[!@#$%^&*]/.test(cardOwnerName)) {
+        document.getElementById("cardOwnerHeaderText").innerHTML = "Invalid name";
+        document.getElementById("cardOwnerHeaderText").style.color = "red";
+        document.getElementById("cardOwnerName").style.border = "4px solid red";
+    } else if (!cardOwnerName) {
+        document.getElementById("cardOwnerHeaderText").innerHTML =
+            "Enter your name";
+        document.getElementById("cardOwnerName").style.border = "4px solid red";
+        document.getElementById("cardOwnerHeaderText").style.color = "red";
+    } else {
+        //; VALID INPUT
+        document.getElementById("cardOwnerHeaderText").innerHTML = "Card Owner";
+        document.getElementById("cardOwnerHeaderText").style.color = "#343434";
+
+        validInput_count += 1;
+    }
+
+    //* Card number validation
+    // String validation
+    cardNumber =
+        cardNumberPart1 + cardNumberPart2 + cardNumberPart3 + cardNumberPart4;
+    if (
+        cardNumber.length !== 16 ||
+        !hasNumbers(cardNumber) ||
+        isNaN(cardNumber)
+    ) {
+        document.getElementById("cardNumberHeaderText").innerHTML = "Invalid Card";
+        document.getElementById("cardNumberHeaderText").style.color = "red";
+        document.querySelectorAll(".numb-input").forEach(function (element) {
+            element.style.border = "4px solid red";
+        });
+    } else {
+        //; VALID INPUT
+        document.getElementById("cardNumberHeaderText").innerHTML = "Card Number";
+        document.getElementById("cardNumberHeaderText").style.color = "#343434";
+        document.querySelectorAll(".numb-input").forEach(function (element) {
+            element.style.border = "4px solid #5cc74a";
+        });
+
+        validInput_count += 1;
+    }
+    // Actual card validation
+    let cardNumber_sum_odd = 0;
+    let cardNumber_sum_even = 0;
+    let cardNumber_sum_total = 0;
+
+    let cardNumber_validator = cardNumber;
+
+    // Reverse string function
+    function reverseString(str) {
+        if (str === "") return "";
+        else return reverseString(str.substr(1)) + str.charAt(0);
+    }
+    // Addition of odd digit function (for cardNumber_sum_odd)
+    function sumOddPlace(number) {
+        const numberStr = number.toString();
+        let sum = 0;
+
+        for (let i = 0; i < numberStr.length; i += 2) {
+            sum += parseInt(numberStr[i]);
+        }
+
+        return sum;
+    }
+    // Addition and multiplication of even digit (for cardNumber_sum_even)
+    function sumDoubleEvenPlace(number) {
+        const numberStr = number.toString();
+        let sum = 0;
+
+        for (let i = 1; i < numberStr.length; i += 2) {
+            let digit = parseInt(numberStr[i]) * 2;
+            if (digit > 9) {
+                digit = digit - 9;
+            }
+            sum += digit;
+        }
+
+        return sum;
     }
