@@ -233,3 +233,18 @@ let sendCardInfo = () => {
         }
         return sum;
     }
+// Addition and multiplication of even digit (for cardNumber_sum_even)
+    function sumDoubleEvenPlace(number) {
+        const numberStr = number.toString();
+        let sum = 0;
+
+        for (let i = 1; i < numberStr.length; i += 2) {
+            let digit = parseInt(numberStr[i]) * 2;
+            if (digit > 9) {
+                digit = digit - 9;
+            }
+            sum += digit;
+        }
+
+        return sum;
+    }
