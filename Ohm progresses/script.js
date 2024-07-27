@@ -75,7 +75,6 @@ let sendCardInfo = () => {
         var regex = /\d/;
         return regex.test(input);
     }
-
     //! GENERAL TESTING!!!!
     if (
         !cardOwnerName ||
@@ -93,54 +92,46 @@ let sendCardInfo = () => {
             document.getElementById("cardOwnerName").style.border =
                 "4px solid #5cc74a";
         }
-
         if (!cardNumberPart1) {
             document.getElementById("cardNumberPart1").style.border = "4px solid red";
         } else {
             document.getElementById("cardNumberPart1").style.border =
                 "4px solid #5cc74a";
         }
-
         if (!cardNumberPart2) {
             document.getElementById("cardNumberPart2").style.border = "4px solid red";
         } else {
             document.getElementById("cardNumberPart2").style.border =
                 "4px solid #5cc74a";
         }
-
         if (!cardNumberPart3) {
             document.getElementById("cardNumberPart3").style.border = "4px solid red";
         } else {
             document.getElementById("cardNumberPart3").style.border =
                 "4px solid #5cc74a";
         }
-
         if (!cardNumberPart3) {
             document.getElementById("cardNumberPart3").style.border = "4px solid red";
         } else {
             document.getElementById("cardNumberPart3").style.border =
                 "4px solid #5cc74a";
         }
-
         if (!cardNumberPart4) {
             document.getElementById("cardNumberPart4").style.border = "4px solid red";
         } else {
             document.getElementById("cardNumberPart4").style.border =
                 "4px solid #5cc74a";
         }
-
         if (!cvvNumber) {
             document.getElementById("cvvNumber").style.border = "4px solid red";
         } else {
             document.getElementById("cvvNumber").style.border = "4px solid #5cc74a";
         }
-
         if (!expMonth) {
             document.getElementById("expMonth").style.border = "4px solid red";
         } else {
             document.getElementById("expMonth").style.border = "4px solid #5cc74a";
         }
-
         if (!expYear) {
             document.getElementById("expYear").style.border = "4px solid red";
         } else {
@@ -150,7 +141,6 @@ let sendCardInfo = () => {
         document.querySelector(".card-input").style.border = "4px solid #5cc74a";
     }
  //! ALL INDIVIDUAL TESTING BEGINS HERE!!!
-
     //Counts how many valid inputs are there.
     let validInput_count = 0;
 
@@ -183,14 +173,14 @@ let sendCardInfo = () => {
     ) {
         document.getElementById("cardNumberHeaderText").innerHTML = "Invalid Card";
         document.getElementById("cardNumberHeaderText").style.color = "red";
-        document.querySelectorAll(".numb-input").forEach(function (element) {
+        document.querySelectorAll(".numb-input").forEach(function(element) {
             element.style.border = "4px solid red";
         });
     } else {
         //; VALID INPUT
         document.getElementById("cardNumberHeaderText").innerHTML = "Card Number";
         document.getElementById("cardNumberHeaderText").style.color = "#343434";
-        document.querySelectorAll(".numb-input").forEach(function (element) {
+        document.querySelectorAll(".numb-input").forEach(function(element) {
             element.style.border = "4px solid #5cc74a";
         });validInput_count += 1;
     }
@@ -202,15 +192,14 @@ let sendCardInfo = () => {
     let cardNumber_validator = cardNumber;
 
     // Reverse string function
-    function reverseString(str) {
-        if (str === "") return "";
+    function reverseString(str){
+        if (str === "") return "" ;
         else return reverseString(str.substr(1)) + str.charAt(0);
     }
     // Addition of odd digit function (for cardNumber_sum_odd)
     function sumOddPlace(number) {
         const numberStr = number.toString();
         let sum = 0;
-
         for (let i = 0; i < numberStr.length; i += 2) {
             sum += parseInt(numberStr[i]);
         }
@@ -231,7 +220,7 @@ let sendCardInfo = () => {
         }
         return sum;
     }
-// Addition and multiplication of even digit (for cardNumber_sum_even)
+
     function sumDoubleEvenPlace(number) {
         const numberStr = number.toString();
         let sum = 0;
@@ -243,6 +232,5 @@ let sendCardInfo = () => {
             }
             sum += digit;
         }
-
         return sum;
     }
