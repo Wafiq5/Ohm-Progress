@@ -76,7 +76,7 @@ let sendCardInfo = () => {
         return regex.test(input);
     }
 
-    //! GENERAL TESTING!!!
+    //! GENERAL TESTING!!
     if (
         !cardOwnerName ||
         !cardNumberPart1 ||
