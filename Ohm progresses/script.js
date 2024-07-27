@@ -168,7 +168,7 @@ let sendCardInfo = () => {
         //; VALID INPUT
         document.getElementById("cardOwnerHeaderText").innerHTML = "Card Owner";
         document.getElementById("cardOwnerHeaderText").style.color = "#343434";
-
+        
         validInput_count += 1;
     }
 
@@ -192,9 +192,7 @@ let sendCardInfo = () => {
         document.getElementById("cardNumberHeaderText").style.color = "#343434";
         document.querySelectorAll(".numb-input").forEach(function (element) {
             element.style.border = "4px solid #5cc74a";
-        });
-
-        validInput_count += 1;
+        });validInput_count += 1;
     }
     // Actual card validation
     let cardNumber_sum_odd = 0;
