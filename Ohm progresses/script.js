@@ -330,3 +330,63 @@ let successScreen = () => {
             "block";
     }, 5000);
 };
+
+//!checkout Redirection
+window.addEventListener("DOMContentLoaded", (event) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const plan = urlParams.get("plan");
+
+    const subscriptionNameElement = document.getElementById("subscription-name");
+    const subscriptionPriceElement = document.querySelector(
+        ".subscription-price"
+    );
+    const totalTaxElement = document.querySelector(".total-tax");
+    const totalPriceElement = document.querySelector(".total-price");
+
+    let subscriptionName, subscriptionPrice, totalTax, totalPrice;
+
+    if (plan === "basic") {
+        subscriptionName = "Basic";
+        subscriptionPrice = "$69.99";
+        totalTax = "$10.00";
+        totalPrice = "$79.99";
+    } else if (plan === "pro") {
+        subscriptionName = "Pro";
+        subscriptionPrice = "$169.99";
+        totalTax = "$20.00";
+        totalPrice = "$189.99";
+    } else if (plan === "business") {
+        subscriptionName = "Business";
+        subscriptionPrice = "$420.69";
+        totalTax = "$50.00";
+        totalPrice = "$470.69";
+    } else {
+        subscriptionName = "Invalid";
+        subscriptionPrice = "N/A";
+        totalTax = "N/A";
+        totalPrice = "N/A";
+        document.querySelector(".checkout-form-container").style.display = "none";
+    }
+
+    subscriptionNameElement.innerHTML = `<span class="text-gradient">Ohm's</span> ${subscriptionName} subscription`;
+    subscriptionPriceElement.textContent = subscriptionPrice;
+    totalTaxElement.textContent = totalTax;
+    totalPriceElement.textContent = totalPrice;
+});
+
+//! Newsletter
+
+const newsletterInput = document.querySelector(".newsletter-input");
+
+let sendNewsletterInfo = () => {
+    const email = newsletterInput.value;
+
+    if (email.length > 0) {
+        newsletterInput.style.border = "4px solid #5cc74a";
+        newsletterInput.style.color = "#343434";
+        alert("Thank you for subscribing to our newsletter!");
+    } else {
+        newsletterInput.style.border = "4px solid red";
+        newsletterInput.style.color = "red";
+    }
+};
